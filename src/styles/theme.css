@@ -1,0 +1,57 @@
+/* BlackArch-inspired theme */
+:root {
+  --primary: #00ff9f;
+  --secondary: #00b8d4;
+  --background: #0a0a0a;
+  --surface: #1a1a1a;
+  --text: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent: #ff0066;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.bg-theme-surface {
+  background-color: var(--surface);
+}
+
+.text-theme-primary {
+  color: var(--primary);
+}
+
+.text-theme-secondary {
+  color: var(--secondary);
+}
+
+.border-theme-primary {
+  border-color: var(--primary);
+}
+
+.hover\:bg-theme-surface:hover {
+  background-color: var(--surface);
+}
+
+/* Glitch effect */
+.glitch-text {
+  position: relative;
+  animation: glitch 3s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: none; opacity: 1; }
+  7% { transform: skew(-0.5deg, -0.9deg); opacity: 0.75; }
+  10% { transform: none; opacity: 1; }
+  27% { transform: none; opacity: 1; }
+  30% { transform: skew(0.8deg, -0.1deg); opacity: 0.75; }
+  35% { transform: none; opacity: 1; }
+  52% { transform: none; opacity: 1; }
+  55% { transform: skew(-1deg, 0.2deg); opacity: 0.75; }
+  50% { transform: none; opacity: 1; }
+  72% { transform: none; opacity: 1; }
+  75% { transform: skew(0.4deg, 1deg); opacity: 0.75; }
+  80% { transform: none; opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}

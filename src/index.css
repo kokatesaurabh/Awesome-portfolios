@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  cursor: none;
+  background: black;
+  overflow-x: hidden;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+::selection {
+  background: #06b6d4;
+  color: black;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(-5px, 5px);
+  }
+  20% {
+    clip-path: inset(15% 0 65% 0);
+    transform: translate(5px, -5px);
+  }
+  40% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(-5px, 5px);
+  }
+  60% {
+    clip-path: inset(40% 0 43% 0);
+    transform: translate(5px, -5px);
+  }
+  80% {
+    clip-path: inset(25% 0 58% 0);
+    transform: translate(-5px, 5px);
+  }
+  100% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(5px, -5px);
+  }
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+}
+
+.glitch:hover::before {
+  animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #00ffff;
+  z-index: -1;
+}
+
+.glitch:hover::after {
+  animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  color: #ff00ff;
+  z-index: -2;
+}
