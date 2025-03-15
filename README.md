@@ -1,4 +1,4 @@
-echo "# Awesome-Portfolios
+# Awesome-Portfolios
 
 🚀 A collection of beautifully designed **normal and Three.js-based** portfolio templates for developers. Whether you're a beginner or an expert, these portfolios will help you showcase your skills in style!
 
